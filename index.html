@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeStays</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- <link href="./fonts/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <i class="fas fa-home"> Home <span style="font-style: italic; font-weight: 100;">Stays</span>
+                    </i>
+                </a>
+                <div class="list-inline-border">
+                    <li>
+                        <i class="fas fa-pencil-alt"></i> BOOK NOW
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i> +84 123 456 789
+                    </li>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a class="offcanvas-title navbar-brand" id="offcanvasDarkNavbarLabel" href="./index.html">
+                            <i class="fas fa-home"> Home <span
+                                    style="font-style: italic; font-weight: 100;">Stays</span>
+                            </i>
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./rooms.html">ROOMS</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    PAGES
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Blog</a></li>
+                                    <li><a class="dropdown-item" href="#">Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CONTACT</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-web" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="section-booking" style="margin-top: 85px;">
+        <div class="container align-items=center">
+            <div class="section-booking-header text-center">
+                <h1>
+                    DISCOVER
+                </h1>
+                <h1>
+                    HOMESTAYS'S ROOMS
+                </h1>
+                <h3>
+                    PERFECT FOR ANY TRIP
+                </h3>
+            </div>
+            <form class="row g-3">
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <input type="date" class="form-control" id="day-in" name="day-in" placeholder="Check In">
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <input type="date" class="form-control" id="day-out" name="day-out" placeholder="Check out">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <input type="number" class="form-control" id="guests" placeholder="Guests">
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <button type="submit" class="btn btn-add-to-card">BOOK NOW</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="section-vision" style="background-color: #f5f6fa;">
+        <div class="container">
+            <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+                <div class="col-md-10 col-lg-6 col-xl-5">
+                    <h1 class="my-title">
+                        Relax at Our <span style="font-style: italic; font-weight: 500;">Homestay</span>
+                    </h1>
+                    <p>
+                        <span>
+                            HomeStays and Suites is a family-owned Boutique Hotel that desires to cater and provide
+                            guests with personalized hospitality based on what they prefer.
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            Whether the guest is looking for quiet time and lots of privacy or seeking energetic,
+                            friendly environment in the most delightful place away from home, we can provide it.
+                        </span>
+                    </p>
+                    <p>
+                        <a class="navbar-brand" href="./index.html">
+                            <i class="fas fa-home"> Home <span
+                                    style="font-style: italic; font-weight: 100;">Stays</span>
+                            </i>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-5">
+                    <img class="slideInLeft" src="./Image/room01.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-our-rooms">
+        <div class="container">
+            <h1 class="my-title" style="padding-bottom: 50px;">
+                <span style="font-style: italic; font-weight: 500;">Our</span> Rooms
+            </h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Image/room01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-title item-header">
+                                <h1 class="hotel-name">Single Room</h1>
+                            </div>
+                            <div class="room-price pricePerNight">45$ <span style="font-size: 15px; color: black;">per
+                                    night</span></div>
+                            <p class="card-text">1-2 Guests</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Image/room02.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-title item-header">
+                                <h1 class="hotel-name">Double room</h1>
+                            </div>
+                            <div class="room-price pricePerNight">75$ <span style="font-size: 15px; color: black;">per
+                                    night</span></div>
+                            <p class="card-text">2-4 Guests</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Image/room03.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-title item-header">
+                                <h1 class="hotel-name">Family room</h1>
+                            </div>
+                            <div class="room-price pricePerNight">105$ <span style="font-size: 15px; color: black;">per
+                                    night</span></div>
+                            <p class="card-text">4-6 Guests</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                    <a type="" href="./rooms.html" class="btn btn-add-to-card">VIEW ALL ROOM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="service" style="background-color: #f5f6fa;">
+        <div class="container">
+            <h1 class="my-title" style="padding-bottom: 50px;">
+                Right Services <span style="font-style: italic; font-weight: 500;">for Great Customers</span>
+            </h1>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="service-icon">
+                        <i class="fa fa-swimmer"></i>
+                    </div>
+                    <h3 class="service-title">Swimming Pool</h3>
+                    <div class="content-service">One of the main attractions at the hotel is our extensive, luxurious
+                        20-metre indoor swimming pool.</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="service-icon">
+                        <i class="fa fa-wifi"></i>
+                    </div>
+                    <h3 class="service-title">Free Wifi</h3>
+                    <div class="content-service">We provide our guests with free high-speed Wi-Fi connection throughout
+                        the whole hotel area.</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="service-icon">
+                        <i class="fa fa-egg"></i>
+                    </div>
+                    <h3 class="service-title">Restaurants</h3>
+                    <div class="content-service">Restaurants at Lux Hotel offer a vast choice of great dishes that can
+                        satisfy even the most exquisite tastes.</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="service-icon">
+                        <i class="fa fa-bicycle"></i>
+                    </div>
+                    <h3 class="service-title">Bike Rentals</h3>
+                    <div class="content-service">Our hotel also offers bike rental services to our guests and visitors.
+                        We provide bikes at very affordable prices.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-more">
+        <div class="container align-items=center">
+            <div class="section-booking-header text-center">
+                <h1>
+                    Relax And Enjoy
+                </h1>
+                <h3 style="font-style: italic;">
+                    Your Holiday
+                </h3>
+            </div>
+            <div class="row justify-content-center">
+                <p class="text-center">With a variety of activities and amenities available
+                    at our hotel, you will
+                    surely have a great stay
+                    at our city and enjoy your holiday.</p>
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                    <a type="submit" class="btn btn-add-to-card">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-news">
+        <div class="container">
+            <h1 class="my-title" style="padding-bottom: 50px;">
+                <span style="font-style: italic; font-weight: 500;">Latest</span> NEWS
+            </h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 pt-3">
+                    <div class="card h-100">
+                        <img src="https://livedemo00.template-help.com/wt_prod-19522/images/latest-news-1-571x353.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-title item-header">
+                                <h1 class="hotel-name">6 Tips to Book the Best Hotel for You</h1>
+                            </div>
+                            <p class="card-text">Travelers today are spoiled for choice when it comes to booking a
+                                hotel. Booking the best hotel goes beyond just booking the cheapest, or the most
+                                centrally located. Here's how to...</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 15 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 pt-3">
+                    <div class="card h-100">
+                        <img src="https://livedemo00.template-help.com/wt_prod-19522/images/latest-news-2-571x353.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-title item-header">
+                                <h1 class="hotel-name">Hotel Safety Tips You Should Not Ignore</h1>
+                            </div>
+                            <p class="card-text">These days, travel is no Sunday picnic and when you finally stumble
+                                into the lobby of your hotel, you may be tired, dirty, and in a hurry to get cleaned up,
+                                get some sleep, or get to the first...</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class=" bg-dark">
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <h2 class="footer-heading">
+                        <a class="navbar-brand" href="./index.html">
+                            <i class="fas fa-home"> Home <span
+                                    style="font-style: italic; font-weight: 100;">Stays</span>
+                            </i>
+                        </a>
+                    </h2>
+                    <p class="menu">
+                        <a href="#">Home</a>
+                        <a href="#">Team</a>
+                        <a href="#">About</a>
+                        <a href="#">Rooms</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                    </p>
+                    <ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="ftco-animate">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="./index.html"
+                            target="_blank">HomeStays.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- <script src="./fonts/fontawesome-free-6.4.0-web/js/all.min.js"></script> -->
+</body>
+
+</html>
