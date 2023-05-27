@@ -13,7 +13,6 @@ const hotels = [
         isBestSeller: false,
         hasParking: false,
         allowsPets: false,
-        hasRoomService: false,
         hasFitnessCenter: false
     },
     {
@@ -28,9 +27,8 @@ const hotels = [
         hasFreeCancellation: false,
         includesBreakfast: true,
         isBestSeller: true,
-        hasParking: true,
+        hasParking: false,
         allowsPets: false,
-        hasRoomService: true,
         hasFitnessCenter: true
     },
     {
@@ -47,7 +45,6 @@ const hotels = [
         isBestSeller: true,
         hasParking: true,
         allowsPets: false,
-        hasRoomService: false,
         hasFitnessCenter: true
     },
     {
@@ -64,7 +61,6 @@ const hotels = [
         isBestSeller: false,
         hasParking: false,
         allowsPets: true,
-        hasRoomService: false,
         hasFitnessCenter: true
     },
     {
@@ -81,16 +77,96 @@ const hotels = [
         isBestSeller: false,
         hasParking: true,
         allowsPets: false,
-        hasRoomService: true,
         hasFitnessCenter: false
+    },
+    {
+        id: 123,
+        hotelName: "Ruby International Hotel",
+        rating: 8.3,
+        reviewCount: 2393,
+        pricePerNight: 308.34,
+        imageSrc:
+            "https://livedemo00.template-help.com/wt_prod-19522/images/job-portal-4-370x264.jpg",
+        update: 9,
+        hasFreeCancellation: true,
+        includesBreakfast: true,
+        isBestSeller: false,
+        hasParking: false,
+        allowsPets: false,
+        hasFitnessCenter: false
+    },
+    {
+        id: 124,
+        hotelName: "Hotel Jackson",
+        rating: 5.6,
+        reviewCount: 40642,
+        pricePerNight: 240.0,
+        imageSrc:
+            "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2020/11/pexels-castorly-stock-3682238-scaled.jpg",
+        update: 22,
+        hasFreeCancellation: false,
+        includesBreakfast: true,
+        isBestSeller: true,
+        hasParking: true,
+        allowsPets: false,
+        hasFitnessCenter: true
+    },
+    {
+        id: 125,
+        hotelName: "Atom Suites Hotel",
+        rating: 8.7,
+        reviewCount: 5301,
+        pricePerNight: 314,
+        imageSrc:
+            "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2020/11/pexels-engin-akyurt-2725675-scaled.jpg",
+        update: 2,
+        hasFreeCancellation: false,
+        includesBreakfast: false,
+        isBestSeller: true,
+        hasParking: false,
+        allowsPets: true,
+        hasFitnessCenter: true
+    },
+    {
+        id: 127,
+        hotelName: "State Street Hotel",
+        rating: 8.5,
+        reviewCount: 1271,
+        pricePerNight: 289,
+        imageSrc:
+            "https://livedemo00.template-help.com/wt_prod-19522/images/job-portal-2-370x264.jpg",
+        update: 8,
+        hasFreeCancellation: true,
+        includesBreakfast: false,
+        isBestSeller: false,
+        hasParking: true,
+        allowsPets: true,
+        hasFitnessCenter: false
+    },
+    {
+        id: 124,
+        hotelName: "Hotel Jackson",
+        rating: 5.6,
+        reviewCount: 40642,
+        pricePerNight: 240.0,
+        imageSrc:
+            "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2020/11/pexels-castorly-stock-3682238-scaled.jpg",
+        update: 22,
+        hasFreeCancellation: false,
+        includesBreakfast: true,
+        isBestSeller: true,
+        hasParking: true,
+        allowsPets: false,
+        hasFitnessCenter: true
     }
 ];
 
-const hasFreeCancellation = document.getElementsByClassName("hasFreeCancellation");
-const includesBreakfast = document.getElementsByClassName("includesBreakfast");
-const hasParking = document.getElementsByClassName("hasParking");
-const allowsPets = document.getElementsByClassName("allowsPets");
-const hasFitnessCenter = document.getElementsByClassName("hasFitnessCenter");
+let hasFreeCancellation = document.getElementsByClassName("hasFreeCancellation");
+let includesBreakfast = document.getElementsByClassName("includesBreakfast");
+let hasParking = document.getElementsByClassName("hasParking");
+let allowsPets = document.getElementsByClassName("allowsPets");
+let hasFitnessCenter = document.getElementsByClassName("hasFitnessCenter");
+let viewAll = document.getElementById("viewAll");
 let listRoom = document.getElementById('list-room')
 let checkBoxFilter = document.querySelectorAll(".filter-checkbox");
 
@@ -107,12 +183,11 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
 function displayHotelFiltered(hotels) {
     hotels.forEach((hotel) => {
         const content = `
     <div class="card mb-3 list-room-item">
-        <div class="row g-0">
+        <div class="row g-0 item">
             <div class="col-md-4">
                 <img src="${hotel.imageSrc}" class=" card-img rounded-start" alt="...">
             </div>
@@ -162,11 +237,13 @@ function displayHotelFiltered(hotels) {
         }
     }
 }
-
-function viewAllRooms() {
+if (viewAll.checked) {
     displayHotelFiltered(hotels);
 }
-
+function viewAllRooms() {
+    listRoom.innerHTML = ``;
+    displayHotelFiltered(hotels);
+}
 function filterHasFreeCancellation() {
     listRoom.innerHTML = ``;
     const newHotels = [];
@@ -177,7 +254,6 @@ function filterHasFreeCancellation() {
     });
     displayHotelFiltered(newHotels);
 }
-
 function filterIncludesBreakfast() {
     listRoom.innerHTML = ``;
     const newHotels = [];
@@ -188,7 +264,6 @@ function filterIncludesBreakfast() {
     });
     displayHotelFiltered(newHotels);
 }
-
 function filterhasParking() {
     listRoom.innerHTML = ``;
     const newHotels = [];
@@ -218,4 +293,54 @@ function filterHasFitnessCenter() {
         }
     });
     displayHotelFiltered(newHotels);
+}
+
+let thisPage = 1;
+let limit = 3;
+let list = document.querySelectorAll('.list-room-item');
+
+function loadItem() {
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    list.forEach((item, key) => {
+        if (key >= beginGet && key <= endGet) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    })
+    listPage();
+}
+loadItem();
+function listPage() {
+    let count = Math.ceil(list.length / limit);
+    document.querySelector('.listPage').innerHTML = '';
+
+    if (thisPage != 1) {
+        let prev = document.createElement('li');
+        prev.innerText = 'PREV';
+        prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
+        document.querySelector('.listPage').appendChild(prev);
+    }
+
+    for (i = 1; i <= count; i++) {
+        let newPage = document.createElement('li');
+        newPage.innerText = i;
+        if (i == thisPage) {
+            newPage.classList.add('active');
+        }
+        newPage.setAttribute('onclick', "changePage(" + i + ")");
+        document.querySelector('.listPage').appendChild(newPage);
+    }
+
+    if (thisPage != count) {
+        let next = document.createElement('li');
+        next.innerText = 'NEXT';
+        next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
+        document.querySelector('.listPage').appendChild(next);
+    }
+}
+function changePage(i) {
+    thisPage = i;
+    loadItem();
 }

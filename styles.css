@@ -124,7 +124,7 @@
 
 @media (max-width: 425px) {
     #section-booking {
-        padding: 100px 0;
+        padding: 50px 0;
     }
 
     .section-booking-header h1 {
@@ -144,7 +144,7 @@
 }
 
 #section-vision {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 #section-vision img {
@@ -153,7 +153,7 @@
 }
 
 #section-our-rooms {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 #section-our-rooms .card {
@@ -174,7 +174,7 @@
 }
 
 #service {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 #service .service-icon {
@@ -212,7 +212,7 @@
 }
 
 #section-news {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 #section-news .hotel-name {
@@ -231,13 +231,13 @@
 }
 
 #find-rooms {
-    margin-top: 150px;
-    margin-bottom: 100px;
+    margin-top: 65px;
+    margin-bottom: 65px;
 }
 
 #filter {
     background-color: #e5d8cb;
-    height: 260px;
+    height: 300px;
     font-size: 1.2rem;
     border: 1px solid #888;
     border-radius: 5px;
@@ -246,7 +246,6 @@
 
 @media (min-width: 426px) and (max-width: 767px) {
     #filter {
-        height: 300px;
         font-size: 1.1rem;
     }
 }
@@ -410,4 +409,109 @@
 
 #myBtn:hover {
     background-color: #555;
+}
+
+#tgb-loader {
+    position: fixed;
+    z-index: 99999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c19b76
+}
+
+.no-js #tgb-loader,
+.oldie #tgb-loader {
+    display: none
+}
+
+#loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em)
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    top: 50%;
+    animation: loader 4s infinite ease
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    25% {
+        transform: rotate(180deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    75% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0
+    }
+
+    25% {
+        height: 0
+    }
+
+    50% {
+        height: 100%
+    }
+
+    75% {
+        height: 100%
+    }
+
+    100% {
+        height: 0
+    }
+}
+
+.listPage {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+.listPage li {
+    background-color: #ffffffBD;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.listPage .active {
+    background-color: #c19b76;
+    color: #fff;
+    border-radius: 15%;
 }

@@ -77,6 +77,31 @@
             </div>
         </nav>
     </header>
+
+    <div id="section-booking" style="margin-top: 85px;">
+        <div class="container align-items=center">
+            <div class="section-booking-header text-center">
+                <h1>
+                    HOMESTAYS'S ROOMS
+                </h1>
+            </div>
+            <form class="row g-3">
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <input type="date" class="form-control" id="day-in" name="day-in" placeholder="Check In">
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <input type="date" class="form-control" id="day-out" name="day-out" placeholder="Check out">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <input type="number" class="form-control" id="guests" placeholder="Guests">
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                    <button type="submit" class="btn btn-add-to-card">BOOK NOW</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div id="find-rooms">
         <h2 class="my-title">
             <span style="font-style: italic; font-weight: 500;">Find</span> Rooms
@@ -87,6 +112,13 @@
                     <h4 class="filter-title">Filter By: </h4>
                     <hr />
                     <div class="list-group">
+                        <div class="form-check">
+                            <input class="form-check-input  filter-radio" type="radio" onclick="viewAllRooms()"
+                                name="flexRadioDefault" id="viewAll" checked>
+                            <label class="form-check-label" for="viewAll">
+                                View All
+                            </label>
+                        </div>
                         <div class="form-check">
                             <input class="form-check-input  filter-radio" type="radio"
                                 onclick="filterHasFreeCancellation()" name="flexRadioDefault" id="hasFreeCancellation">
@@ -127,9 +159,12 @@
                 </div>
                 <div id="list-room" class="col-8">
                 </div>
+                <ul class="listPage">
+                </ul>
             </div>
         </div>
     </div>
+
     <footer id="footer" class=" bg-dark">
         <div class="container ">
             <div class="row justify-content-center">
@@ -181,14 +216,31 @@
         </div>
     </footer>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <a onclick="topFunction()" id="myBtn" title="Go to top">
         <i class="fa fa-angle-up"></i>
-    </button>
+    </a>
+    <b:if cond='data:blog.pageType == "index"'>
+        <div id='tgb-loader'>
+            <div id='loader'>
+                <span class='loader'><span class='loader-inner'></span></span>
+            </div>
+        </div>
+    </b:if>
 
     <script src="./app.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <!-- <script src="./fonts/fontawesome-free-6.4.0-web/js/all.min.js"></script> -->
+    <script type='text/javascript'>
+        /*<![CDATA[*/
+        $(window).bind("load", function () {
+            jQuery("#loader").delay(700).fadeOut();
+            jQuery("#tgb-loader").delay(900).fadeOut();
+        });
+        /*]]>*/
+    </script>
 </body>
 
 </html>
